@@ -26,7 +26,7 @@
 .idea/
 .idea_/
 .vs/
-.vscode/
+.vscode/*
 __history/
 __recovery/
 __pycache__/

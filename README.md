@@ -36,7 +36,6 @@ Instructions for the lightweight setup:
   - In the Workloads tab select "Desktop development with C++"
   - On the right hand side in the "Installation details" checklist, select two optional features: **MSVC Build Tools** and **C++ CMake Tools** (918MB download, 3.29GB disk space) and uncheck all others.
 5. Download [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user) and install it.
-6. Open Visual Studio Code and install extensions:
+6. Open `audio_device_module_template` folder in Visual Studio Code and install the recommended extensions (accept the prompt):
 	- C/C++ by Microsoft
 	- CMake Tools by Microsoft
-7. Recommendation: in the CMake Tools extension settings set "Status Bar Visibility" option to "visible" - it allows for easier selection of build parameters.
