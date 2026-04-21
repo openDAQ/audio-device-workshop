@@ -22,7 +22,19 @@ opendaq_setup_compiler_flags(${REPO_OPTION_PREFIX})
 
 find_package(${OPENDAQ_SDK_NAME} 3.31.0 GLOBAL)
 if (NOT ${OPENDAQ_SDK_NAME}_FOUND)
-	message(FATAL_ERROR "Only installed openDAQ should be used!" )
+	include(FetchContent)
+	set(OPENDAQ_ENABLE_TESTS OFF CACHE BOOL "")
+
+	opendaq_get_custom_fetch_content_params(${OPENDAQ_SDK_NAME} FC_PARAMS)
+
+	FetchContent_Declare(
+		${OPENDAQ_SDK_NAME}
+		GIT_REPOSITORY https://github.com/openDAQ/openDAQ.git
+		GIT_TAG 1f7e703f0cbb25c9b47866caef9328dc68744cea
+		GIT_PROGRESS   ON
+		${FC_PARAMS}
+	)
+	FetchContent_MakeAvailable(${OPENDAQ_SDK_NAME})
 endif()
 
 add_subdirectory(external)

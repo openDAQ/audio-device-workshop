@@ -23,10 +23,12 @@ int main()
 	using namespace std::chrono_literals;
 
 	// Create reader for 1st visible device signal
-	auto reader = StreamReader(instance.getSignalsRecursive()[0]);
+	auto signal = instance.getSignalsRecursive()[0];
+	std::cout << signal.getName() << std::endl;
+	auto reader = StreamReader(signal);
 	
 	// Allocate a buffer large enough to hold 50000 samples per second
-	double* data[10000];
+	double data[10000];
 	for (int i = 0; i < 10; ++i)
 	{
 		size_t cnt = reader.getAvailableCount();
