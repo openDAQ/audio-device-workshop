@@ -12,3 +12,4 @@ FetchContent_Declare(
     GIT_PROGRESS   ON
 )
 FetchContent_MakeAvailable(opendaq-cmake-utils)
+opendaq_common_early_setup()
