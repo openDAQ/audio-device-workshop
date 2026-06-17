@@ -20,7 +20,7 @@ endif()
 opendaq_common_compile_targets_settings()
 opendaq_setup_compiler_flags(${REPO_OPTION_PREFIX})
 
-find_package(${OPENDAQ_SDK_NAME} 3.31.0 GLOBAL)
+find_package(${OPENDAQ_SDK_NAME} 3.40.0 GLOBAL)
 if (NOT ${OPENDAQ_SDK_NAME}_FOUND)
 	include(FetchContent)
 	set(OPENDAQ_ENABLE_TESTS OFF CACHE BOOL "")
@@ -30,7 +30,7 @@ if (NOT ${OPENDAQ_SDK_NAME}_FOUND)
 	FetchContent_Declare(
 		${OPENDAQ_SDK_NAME}
 		GIT_REPOSITORY https://github.com/openDAQ/openDAQ.git
-		GIT_TAG 1f7e703f0cbb25c9b47866caef9328dc68744cea
+		GIT_TAG v3.40.0
 		GIT_PROGRESS   ON
 		${FC_PARAMS}
 	)
