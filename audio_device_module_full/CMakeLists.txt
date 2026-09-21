@@ -10,6 +10,7 @@ opendaq_get_version_major_minor_patch("${module_version}" ${REPO_OPTION_PREFIX}_
 project(${REPO_NAME} VERSION ${${REPO_OPTION_PREFIX}_VERSION} LANGUAGES CXX)
 
 # options
+set(OPENDAQ_ENABLE_UNITY_LIBS ON CACHE BOOL "Unity builds for libraries")
 opendaq_setup_common_build_options()
 opendaq_setup_project_specific_build_options(${REPO_OPTION_PREFIX})
 
